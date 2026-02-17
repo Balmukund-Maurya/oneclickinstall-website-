@@ -61,22 +61,31 @@ function updatePlatformUI() {
 
 // Handle download button clicks
 function handleDownload(platform) {
-    // GitHub releases URLs (update these with your actual release URLs)
     const downloadUrls = {
         'macos': 'mysoftware/OneClickInstall-1.0.0-arm64.dmg',
         'windows': 'mysoftware/OneClickInstall Setup 1.0.0.exe'
     };
 
+    const filenames = {
+        'macos': 'OneClickInstall.dmg',
+        'windows': 'OneClickInstall-Setup.exe'
+    };
+
     const url = downloadUrls[platform];
+    const filename = filenames[platform];
 
     if (url) {
-        // Track download (you can integrate analytics here)
         console.log(`Download initiated for ${platform}`);
 
-        // Open download URL
-        window.open(url, '_blank');
+        // Create a temporary link to force the filename
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = filename;
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     } else {
-        alert('Download not available for this platform yet. Please check GitHub releases.');
+        alert('Download not available for this platform yet.');
     }
 }
 
