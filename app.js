@@ -62,25 +62,19 @@ function updatePlatformUI() {
 // Handle download button clicks
 function handleDownload(platform) {
     const downloadUrls = {
-        'macos': 'mysoftware/OneClickInstall-1.0.0-arm64.dmg',
-        'windows': 'mysoftware/OneClickInstall Setup 1.0.0.exe'
-    };
-
-    const filenames = {
-        'macos': 'OneClickInstall.dmg',
-        'windows': 'OneClickInstall-Setup.exe'
+        'macos': 'mysoftware/OneClickInstall.dmg',
+        'windows': 'mysoftware/OneClickInstall-Setup.exe'
     };
 
     const url = downloadUrls[platform];
-    const filename = filenames[platform];
 
     if (url) {
         console.log(`Download initiated for ${platform}`);
 
-        // Create a temporary link to force the filename
+        // Pointing directly to the cleaned file name for the best browser compatibility
         const link = document.createElement('a');
         link.href = url;
-        link.download = filename;
+        link.download = platform === 'macos' ? 'OneClickInstall.dmg' : 'OneClickInstall-Setup.exe';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
