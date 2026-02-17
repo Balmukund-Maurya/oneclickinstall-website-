@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="OneClickInstall - Install your entire dev stack in one click. Manage 100+ essential developer tools with a beautiful, modern interface. Powered by Homebrew and Winget.">
+    <meta name="keywords"
+        content="developer tools, homebrew, winget, package manager, software installer, dev stack, electron app">
+    <meta name="author" content="Balmukund Maurya">
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://oneclickinstall.dev/">
+    <meta property="og:title" content="OneClickInstall - Install Your Dev Stack in One Click">
+    <meta property="og:description"
+        content="Say goodbye to manual installations. Manage 100+ essential developer tools with a beautiful, modern interface.">
+    <meta property="og:image" content="/assets/og-image.jpg">
+
+    <title>OneClickInstall - Install Your Dev Stack in One Click</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <span class="logo-text">OneClickInstall</span>
+                </div>
+                <div class="nav-links">
+                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#demo" class="nav-link">Demo</a>
+                    <a href="#download" class="nav-link">Download</a>
+                    <!-- GitHub link removed to keep source private -->
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Install Your Dev Stack<br>
+                        <span class="gradient-text">in One Click</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Say goodbye to manual installations. OneClickInstall manages <strong>100+ essential developer
+                            tools</strong> with a beautiful, modern interface. Powered by Homebrew and Winget.
+                    </p>
+                    <div class="hero-cta">
+                        <button class="btn btn-primary" id="download-primary">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download for <span id="platform-name">macOS</span>
+                        </button>
+                        <!-- GitHub button removed -->
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="stat-value">100+</div>
+                            <div class="stat-label">Apps Available</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">2</div>
+                            <div class="stat-label">Platforms</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-value">MIT</div>
+                            <div class="stat-label">License</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <div class="app-mockup">
+                        <div class="mockup-window">
+                            <div class="window-controls">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="window-content">
+                                <video autoplay muted loop playsinline id="hero-video">
+                                    <source src="assets/demovid/domovid.mov" type="video/mp4">
+                                    <source src="assets/demovid/domovid.mov" type="video/quicktime">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Powerful Features</h2>
+                <p class="section-subtitle">Everything you need to manage your development environment</p>
+            </div>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Bulk Installation</h3>
+                    <p class="feature-desc">Select multiple apps and install them all simultaneously. Save hours of
+                        setup time.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">100+ Curated Apps</h3>
+                    <p class="feature-desc">From VS Code to Docker, from Figma to Slack. Everything you need,
+                        categorized and searchable.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Smart Detection</h3>
+                    <p class="feature-desc">Automatically detects installed software to prevent conflicts and save
+                        bandwidth.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="23 4 23 10 17 10"></polyline>
+                            <polyline points="1 20 1 14 7 14"></polyline>
+                            <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Auto-Retry System</h3>
+                    <p class="feature-desc">Network hiccup? No problem. Automatic retry handles failures gracefully.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                            <line x1="8" y1="21" x2="16" y2="21"></line>
+                            <line x1="12" y1="17" x2="12" y2="21"></line>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Cross-Platform</h3>
+                    <p class="feature-desc">Seamless support for macOS (Homebrew) and Windows (Winget). Linux coming
+                        soon.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                            <polyline points="21 15 16 10 5 21"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Modern UI</h3>
+                    <p class="feature-desc">Beautiful light/dark themes with glassmorphism, grid/list views, and
+                        real-time logs.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="8" y1="6" x2="21" y2="6"></line>
+                            <line x1="8" y1="12" x2="21" y2="12"></line>
+                            <line x1="8" y1="18" x2="21" y2="18"></line>
+                            <line x1="3" y1="6" x2="3.01" y2="6"></line>
+                            <line x1="3" y1="12" x2="3.01" y2="12"></line>
+                            <line x1="3" y1="18" x2="3.01" y2="18"></line>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Task Queue</h3>
+                    <p class="feature-desc">Sequential execution ensures stability. Emergency stop available for instant
+                        control.</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="feature-title">Audit Logging</h3>
+                    <p class="feature-desc">Track every installation and uninstallation for complete transparency.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Demo Section -->
+    <section class="demo" id="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">See It In Action</h2>
+                <p class="section-subtitle">Watch the video demo and explore the modern interface</p>
+            </div>
+
+            <div class="demo-showcase">
+                <!-- Video Demo -->
+                <div class="demo-video">
+                    <video autoplay muted loop playsinline>
+                        <source src="assets/demovid/domovid.mov" type="video/mp4">
+                        <source src="assets/demovid/domovid.mov" type="video/quicktime">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section class="tech-stack">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Built With Modern Technology</h2>
+                <p class="section-subtitle">Powered by the best tools in the industry</p>
+            </div>
+
+            <div class="tech-grid">
+                <div class="tech-badge">
+                    <span class="tech-name">Electron</span>
+                </div>
+                <div class="tech-badge">
+                    <span class="tech-name">React 18</span>
+                </div>
+                <div class="tech-badge">
+                    <span class="tech-name">TypeScript</span>
+                </div>
+                <div class="tech-badge">
+                    <span class="tech-name">Homebrew</span>
+                </div>
+                <div class="tech-badge">
+                    <span class="tech-name">Winget</span>
+                </div>
+                <div class="tech-badge">
+                    <span class="tech-name">Vite</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Section -->
+    <section class="download" id="download">
+        <div class="container">
+            <div class="download-content">
+                <h2 class="download-title">Ready to Get Started?</h2>
+                <p class="download-subtitle">Download OneClickInstall for your platform and streamline your dev
+                    environment setup</p>
+
+                <div class="download-buttons">
+                    <button class="btn btn-download btn-macos" data-platform="macos">
+                        <div class="btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09l.01-.01zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z" />
+                            </svg>
+                        </div>
+                        <div class="btn-text">
+                            <div class="btn-label">macOS</div>
+                            <div class="btn-sublabel">Apple Silicon & Intel</div>
+                        </div>
+                    </button>
+
+                    <button class="btn btn-download btn-windows" data-platform="windows">
+                        <div class="btn-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                fill="currentColor">
+                                <path
+                                    d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801" />
+                            </svg>
+                        </div>
+                        <div class="btn-text">
+                            <div class="btn-label">Windows</div>
+                            <div class="btn-sublabel">Windows 10/11</div>
+                        </div>
+                    </button>
+                </div>
+
+                <div class="download-info">
+                    <p class="version">Version 1.0.0 • <a href="#download" class="release-link">Latest Stable
+                            Version</a></p>
+                    <p class="requirements">System Requirements: macOS 10.15+ or Windows 10+</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-text">OneClickInstall</span>
+                    </div>
+                    <p class="footer-desc">Simplifying developer tool management,<br>one click at a time.</p>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Product</h4>
+                    <a href="#features">Features</a>
+                    <a href="#demo">Demo</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <a href="#download">Download</a>
+                    <a href="#">Support</a>
+                </div>
+
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="#">License Agreement</a>
+                    <a href="#">Privacy Policy</a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 OneClickInstall. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

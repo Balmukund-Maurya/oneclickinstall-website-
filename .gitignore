@@ -1,0 +1,16 @@
+# OS junk
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDEs
+.vscode/
+.idea/
+
+# Binaries/Builds (Keep the mysoftware folder)
+# !mysoftware/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
