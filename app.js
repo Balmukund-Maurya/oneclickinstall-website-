@@ -21,42 +21,45 @@ function detectPlatform() {
 // Update UI based on platform
 function updatePlatformUI() {
     const platform = detectPlatform();
-    const platformName = document.getElementById('platform-name');
-    const downloadPrimary = document.getElementById('download-primary');
+    const macosHeroBtn = document.getElementById('download-macos-hero');
+    const windowsHeroBtn = document.getElementById('download-windows-hero');
 
-    // Platform names mapping
-    const platformNames = {
-        'macos': 'macOS',
-        'windows': 'Windows',
-        'linux': 'Linux'
-    };
-
-    // Update hero download button
-    if (platformName) {
-        platformName.textContent = platformNames[platform];
+    // Highlight the detected platform button in hero
+    if (platform === 'macos' && macosHeroBtn) {
+        macosHeroBtn.classList.remove('btn-secondary');
+        macosHeroBtn.classList.add('btn-primary');
+        if (windowsHeroBtn) {
+            windowsHeroBtn.classList.remove('btn-primary');
+            windowsHeroBtn.classList.add('btn-secondary');
+        }
+    } else if (platform === 'windows' && windowsHeroBtn) {
+        windowsHeroBtn.classList.remove('btn-secondary');
+        windowsHeroBtn.classList.add('btn-primary');
+        if (macosHeroBtn) {
+            macosHeroBtn.classList.remove('btn-primary');
+            macosHeroBtn.classList.add('btn-secondary');
+        }
     }
 
-    // Add click handlers for download buttons
-    const macosBtn = document.querySelector('[data-platform="macos"]');
-    const windowsBtn = document.querySelector('[data-platform="windows"]');
-
-    if (macosBtn) {
-        macosBtn.addEventListener('click', () => {
-            handleDownload('macos');
-        });
+    // Add click handlers for hero buttons
+    if (macosHeroBtn) {
+        macosHeroBtn.addEventListener('click', () => handleDownload('macos'));
+    }
+    if (windowsHeroBtn) {
+        windowsHeroBtn.addEventListener('click', () => handleDownload('windows'));
     }
 
-    if (windowsBtn) {
-        windowsBtn.addEventListener('click', () => {
-            handleDownload('windows');
-        });
-    }
+    // Add click handlers for footer/other platform-specific buttons
+    const macosBtns = document.querySelectorAll('[data-platform="macos"]');
+    const windowsBtns = document.querySelectorAll('[data-platform="windows"]');
 
-    if (downloadPrimary) {
-        downloadPrimary.addEventListener('click', () => {
-            handleDownload(platform);
-        });
-    }
+    macosBtns.forEach(btn => {
+        btn.addEventListener('click', () => handleDownload('macos'));
+    });
+
+    windowsBtns.forEach(btn => {
+        btn.addEventListener('click', () => handleDownload('windows'));
+    });
 }
 
 // Handle download button clicks
